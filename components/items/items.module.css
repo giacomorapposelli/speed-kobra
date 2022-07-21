@@ -1,0 +1,103 @@
+.itemContainer {
+    width: 50%;
+    height: 50%;
+    display: flex;
+}
+
+.items {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.description {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-left: 1.5rem;
+}
+
+.itemCard {
+    margin-left: 10%;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemName {
+    margin-top: 0;
+}
+
+.select {
+    height: 25px;
+    width: 8rem;
+    background-color: transparent;
+    font-family: AA_typewriter;
+    border: 1px solid rgb(235, 235, 235);
+    color: rgb(235, 235, 235);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    box-shadow: 1px 1px 1px 0px rgba(231, 231, 231, 0.58);
+    transition: all 0.3s ease-in-out;
+}
+
+.select option {
+    background-color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form button {
+    margin-top: 0.5rem;
+}
+
+.itemImg {
+    border: 1px solid grey;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 0px grey;
+    transition: filter 0.3s ease-in-out;
+    position: relative;
+    width: 9rem;
+    height: 11rem;
+    cursor: pointer;
+}
+
+.itemImg:hover {
+    filter: brightness(0.4);
+    box-shadow: 1px 1px 1px 0px grey;
+    top: 1px;
+}
+
+.item-img:active {
+    box-shadow: 0 0 rgba(236, 236, 236, 0.58);
+    top: 2px;
+}
+
+@media (max-width: 980px) {
+    .items {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .description {
+        margin-top: 2rem;
+    }
+    .itemImg {
+        width: 7rem;
+        height: 9rem;
+    }
+    .itemContainer {
+        margin-bottom: 2rem;
+    }
+}

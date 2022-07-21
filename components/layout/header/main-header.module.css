@@ -1,0 +1,45 @@
+.header {
+    height: 9%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.linksList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.link a {
+    color: rgb(235, 235, 235);
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.link a:hover {
+    color: gray;
+}
+
+@media (max-width: 900px) {
+    .link a {
+        font-size: 1rem;
+    }
+}

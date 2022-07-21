@@ -1,0 +1,12 @@
+.storeContainer {
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+@media (max-width: 980px) {
+    .storeContainer {
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+}

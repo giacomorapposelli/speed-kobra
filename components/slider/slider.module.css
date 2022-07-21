@@ -1,0 +1,33 @@
+.slider {
+    height: 90%;
+    width: 90%;
+    position: fixed;
+    border: 3px solid black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    top: 5%;
+    left: 5%;
+    z-index: 3;
+    box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.58);
+    background-color: rgb(15, 15, 15);
+    background-image: url('../../public/images/background.jpg');
+    background-size: cover;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    position: relative;
+    opacity: 0;
+    transition-duration: 0.3s ease;
+}
+
+.active {
+    position: relative;
+    opacity: 1;
+    transition-duration: 0.3s;
+    transform: scale(1.08);
+}

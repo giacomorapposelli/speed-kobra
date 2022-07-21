@@ -1,0 +1,29 @@
+.showContainer {
+    margin: 0 auto;
+    height: 10%;
+    width: 80%;
+    border-bottom: 2px solid rgb(104, 104, 104);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.columnTitle,
+.column {
+    width: 33%;
+    color: grey;
+    text-align: center;
+}
+
+.column {
+    color: rgb(235, 235, 235);
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .columnTitle,
+    .column {
+        font-size: 0.75rem;
+    }
+}

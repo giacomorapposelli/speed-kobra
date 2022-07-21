@@ -1,0 +1,85 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.message {
+    width: 50%;
+    color: rgb(235, 235, 235);
+    height: 55%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.albumCover {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.albumImg {
+    border: 2px solid rgb(65, 65, 65);
+    box-shadow: 5px 5px 15px 0px rgb(31, 31, 31);
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.albumName {
+    font-size: 5rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #a2700a;
+    letter-spacing: 4px;
+}
+
+.listen {
+    text-decoration: none;
+    color: rgb(235, 235, 235);
+    border: 2px solid rgb(235, 235, 235);
+    box-shadow: 0 2px rgba(172, 172, 172, 0.58);
+    border-radius: 2px;
+    width: 7.5rem;
+    height: 2.5rem;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.listen:hover {
+    color: #a2700a;
+    border: 2px solid #a2700a;
+    box-shadow: 0 2px #a26f0aa0;
+}
+
+@media (max-width: 1000px) {
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .albumImg {
+        width: 20rem;
+        margin-top: 2rem;
+    }
+
+    .message {
+        height: 40%;
+    }
+
+    .albumName {
+        font-size: 3rem;
+    }
+}

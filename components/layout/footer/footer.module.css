@@ -1,0 +1,44 @@
+.footer {
+    height: 6%;
+    width: 100%;
+    color: rgb(235, 235, 235);
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconsContainer {
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+.iconWrapper {
+    box-sizing: content-box;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    transition: filter 0.3s ease-in-out;
+}
+
+.icon:hover {
+    filter: brightness(0.4);
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+@media (max-width: 900px) {
+    .copyright {
+        font-size: 0.9rem;
+    }
+}

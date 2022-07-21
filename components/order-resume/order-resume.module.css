@@ -1,0 +1,85 @@
+.orderResume {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 57rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    background-image: url('../../public/images/background.jpg');
+    background-size: cover;
+    border: 3px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.58);
+    z-index: 3;
+    margin: auto;
+    transform: translate(-50%, -50%);
+}
+
+.orderContainer {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.itemsContainer {
+    height: 20rem;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.address p {
+    color: gray;
+}
+
+.itemsContainer > div {
+    width: 100%;
+    height: 5rem;
+}
+
+.orderContainer > p {
+    text-align: right;
+    font-size: 1.25rem;
+}
+
+.orderContainer h2 {
+    text-align: left;
+}
+
+.checkoutContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkoutContainer button {
+    height: 2rem;
+    width: 8rem;
+    font-size: 1.25rem;
+}
+
+.cartTotal {
+    font-size: 1.2rem;
+}
+
+.orderResume > button {
+    align-self: flex-start;
+    justify-self: flex-start;
+    width: 4rem;
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+
+@media (max-width: 900px) {
+    .orderResume {
+        width: 35rem;
+    }
+    .orderResume > h3 {
+        font-size: 1rem;
+    }
+}

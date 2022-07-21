@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: AA_typewriter;
+    src: url('../public/AA_typewriter.ttf');
+}
+
+body {
+    background-image: url('../public/images/background.jpg');
+    background-size: cover;
+    background-color: black;
+    margin: 0;
+    font-family: AA_typewriter;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+    color: rgb(235, 235, 235);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    color: rgb(235, 235, 235);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    transition-property: background;
+    transition: 0.3s ease-in-out;
+    background: rgba(90, 90, 90, 0.842);
+}
+
+.rightArrow,
+.leftArrow,
+.closeIcon {
+    position: absolute;
+    top: 48%;
+    right: 1%;
+    width: 2rem;
+    z-index: 10;
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out;
+}
+
+.leftArrow {
+    left: 1%;
+}
+
+.closeIcon {
+    top: 2%;
+    width: 1.5rem;
+}
+
+.leftArrow:hover,
+.rightArrow:hover,
+.closeIcon:hover {
+    filter: brightness(0.4);
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+}
