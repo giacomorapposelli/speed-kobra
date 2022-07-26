@@ -1,6 +1,6 @@
 import { Fragment } from 'react/cjs/react.production.min';
-import Footer from './Footer/footer';
-import MainHeader from './Header/main-header';
+import Footer from './footer/footer';
+import MainHeader from './header/main-header';
 
 function Layout(props) {
     return (
