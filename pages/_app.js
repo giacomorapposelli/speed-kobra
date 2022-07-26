@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
         <Layout>
             <Head>
                 <link rel='shortcut icon' href='/favicon/favicon.ico' />
+                <link rel='stylesheet' href='/fonts/style.css' />
             </Head>
             <Overlay>
                 <Component {...pageProps} />
