@@ -4,6 +4,7 @@ import Image from 'next/image';
 import leftArrow from '../../public/icons/left-arrow.png';
 import rightArrow from '../../public/icons/right-arrow.png';
 import closeIcon from '../../public/icons/close-popup.png';
+import spinner from '../../public/icons/spinner.svg';
 
 const ImageSlider = ({ slides, togglePopUp }) => {
     const [current, setCurrent] = useState(0);
@@ -21,7 +22,10 @@ const ImageSlider = ({ slides, togglePopUp }) => {
     }
 
     return (
-        <section className={classes.slider}>
+        <section className={`popUp ${classes.slider}`}>
+            <div className='loading'>
+                <Image src={spinner} alt='loading' />
+            </div>
             <div className='closeIcon' onClick={togglePopUp}>
                 <Image src={closeIcon} alt='close' />
             </div>

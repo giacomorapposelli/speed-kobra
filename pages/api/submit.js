@@ -35,7 +35,6 @@ export default function handler(req, res) {
             ${user.zip}, ${user.city}\r\n
             ${user.country}\r\n\r\n
         `;
-
         const msgDataUser = {
             to: user.email,
             from: 'orders@speed-kobra.com',
@@ -46,7 +45,6 @@ export default function handler(req, res) {
                 '<br>'
             )
         };
-
         const msgDataLocal = {
             to: 'giacomo@rapposelli.org',
             from: 'orders@speed-kobra.com',

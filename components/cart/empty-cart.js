@@ -5,10 +5,8 @@ import emptyCart from '../../public/icons/empty-cart.png';
 function EmptyCart() {
     return (
         <div className={classes.emptyCart}>
-            <h2 className={classes.emptyCartHeadline}>
-                Your Cart is now empty
-            </h2>
-            <div className={classes.emptyIcon}>
+            <h2>Your Cart is now empty</h2>
+            <div>
                 <Image
                     src={emptyCart}
                     alt='empty cart'

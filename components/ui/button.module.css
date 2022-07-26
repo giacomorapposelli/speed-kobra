@@ -16,7 +16,6 @@
 .btn:hover {
     border: 1px solid grey;
     color: grey;
-
     box-shadow: 0 1px rgba(236, 236, 236, 0.58);
     top: 1px;
 }

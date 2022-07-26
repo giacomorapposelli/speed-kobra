@@ -5,8 +5,8 @@ import links from './data';
 function MainHeader() {
     return (
         <header className={classes.header}>
-            <nav className={classes.navigation}>
-                <ul className={classes.linksList}>
+            <nav>
+                <ul>
                     {links.map((link, index) => (
                         <li key={index} className={classes.link}>
                             <Link href={link.href}>{link.name}</Link>

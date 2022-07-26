@@ -3,13 +3,18 @@ import Button from '../ui/button';
 import Image from 'next/image';
 import closeIcon from '../../public/icons/close-popup.png';
 
-export default function ThanksPopup({ setThanksPopUp, setOverlay }) {
+export default function ThanksPopup({
+    setThanksPopUp,
+    setOverlay,
+    setPurchased
+}) {
     const closeModal = () => {
         setThanksPopUp(false);
         setOverlay(false);
+        setPurchased(false);
     };
     return (
-        <div className={classes.thanksPopUp}>
+        <div className={`popUp ${classes.thanksPopUp}`}>
             <div className='closeIcon'>
                 <Image src={closeIcon} alt='close' onClick={closeModal} />
             </div>

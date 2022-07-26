@@ -24,12 +24,13 @@
 }
 
 .card {
-    width: 33%;
+    width: 20rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .cardsContainer {
@@ -41,22 +42,23 @@
     width: 100%;
 }
 
-.cardName:hover {
+.card h3:hover {
     color: gray;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
     .cardsContainer {
         flex-direction: column;
     }
 
     .card {
-        width: 275px;
+        width: 15rem;
+        margin-bottom: 0;
     }
 
-    .cardDesc {
+    .card h3 {
         font-size: 1rem;
     }
 }

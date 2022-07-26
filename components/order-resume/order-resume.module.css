@@ -1,25 +1,14 @@
 .orderResume {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 57rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(15, 15, 15);
-    background-image: url('../../public/images/background.jpg');
-    background-size: cover;
-    border: 3px solid black;
-    border-radius: 0.5rem;
-    box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.58);
-    z-index: 3;
-    margin: auto;
-    transform: translate(-50%, -50%);
 }
 
 .orderContainer {
     width: 90%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -27,27 +16,36 @@
 }
 
 .itemsContainer {
-    height: 20rem;
+    height: 16rem;
     width: 100%;
     overflow-y: scroll;
 }
 
+.headline {
+    text-align: center;
+}
+
+.address h2,
 .address p {
+    margin: 0 auto;
     color: gray;
+}
+
+.address p:first-child {
+    color: white;
 }
 
 .itemsContainer > div {
     width: 100%;
-    height: 5rem;
+    height: 4rem;
 }
 
-.orderContainer > p {
-    text-align: right;
-    font-size: 1.25rem;
-}
-
-.orderContainer h2 {
-    text-align: left;
+.address {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .checkoutContainer {
@@ -57,29 +55,28 @@
     align-items: center;
 }
 
-.checkoutContainer button {
-    height: 2rem;
-    width: 8rem;
-    font-size: 1.25rem;
-}
-
-.cartTotal {
-    font-size: 1.2rem;
-}
-
-.orderResume > button {
-    align-self: flex-start;
-    justify-self: flex-start;
+.address > button {
+    margin: 0.5rem auto;
     width: 4rem;
-    margin-left: 5%;
-    margin-bottom: 1%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 920px) {
     .orderResume {
         width: 35rem;
     }
-    .orderResume > h3 {
-        font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .orderResume {
+        width: 20rem;
+    }
+
+    .cartItem p {
+        font-size: 0.5rem;
+    }
+
+    .address > button {
+        font-size: 0.75rem;
+        width: 3rem;
     }
 }

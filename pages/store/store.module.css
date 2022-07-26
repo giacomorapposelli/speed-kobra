@@ -4,9 +4,10 @@
     height: 70%;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 920px) {
     .storeContainer {
         flex-direction: column;
         overflow-y: scroll;
+        height: 76%;
     }
 }

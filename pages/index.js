@@ -17,7 +17,7 @@ function HomePage() {
                     Listen Here
                 </a>
             </div>
-            <div className={classes.albumCover}>
+            <div className={classes.albumContainer}>
                 <div className={classes.albumImg}>
                     <Image src={album} alt='album' />
                 </div>

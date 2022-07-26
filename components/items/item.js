@@ -48,11 +48,10 @@ export default function Item({ item }) {
                         onClick={togglePopUp}
                     />
                 </div>
-                <form className={classes.form}>
+                <form>
                     <select
                         name='size'
                         onChange={(event) => setSize(event.target.value)}
-                        className={classes.select}
                     >
                         <option value=''>
                             Choose a {item.type === 'Tshirt' ? 'size' : 'color'}
@@ -76,13 +75,9 @@ export default function Item({ item }) {
                 </form>
             </div>
             <div className={classes.description}>
-                <p className={classes.itemName}>{item.name}</p>
-                <p className={classes.itemName}>{item.type}</p>
-                {item.inStock ? (
-                    <p className={classes.itemName}>Price: {item.price}€</p>
-                ) : (
-                    <p className={classes.itemName}>Sold Out</p>
-                )}
+                <p>{item.name}</p>
+                <p>{item.type}</p>
+                {item.inStock ? <p>Price: {item.price}€</p> : <p>Sold Out</p>}
                 {error !== '' && (
                     <ErrorAlert className={classes.error}>{error}</ErrorAlert>
                 )}

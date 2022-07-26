@@ -23,13 +23,13 @@ function CheckoutForm({ toggleCheckoutForm, setOrderResume, user, setUser }) {
     ];
 
     return (
-        <div className={classes.checkOutFormContainer}>
+        <div className={`popUp ${classes.checkOutFormContainer}`}>
             <h2>
                 {localStorage.getItem('user')
                     ? 'EDIT YOUR ADDRESS'
                     : 'CHECKOUT YOUR ORDER'}
             </h2>
-            <form method='POST' className={classes.form} onSubmit={addUser}>
+            <form method='POST' onSubmit={addUser}>
                 {inputFields.map((input, index) => (
                     <input
                         key={index}
@@ -39,7 +39,6 @@ function CheckoutForm({ toggleCheckoutForm, setOrderResume, user, setUser }) {
                             user[input.split(' ').join('').toLowerCase()] || ''
                         }
                         placeholder={input}
-                        className={classes.input}
                         onChange={handleChange}
                         required
                     ></input>

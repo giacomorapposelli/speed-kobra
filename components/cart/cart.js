@@ -7,7 +7,7 @@ import EmptyCart from './empty-cart';
 import Button from '../ui/button';
 import CheckoutForm from '../checkout-form/checkout-form';
 import OrderResume from '../order-resume/order-resume';
-import { calculateTotal } from '../../utils/utils';
+import { calculateTotal, generateCode } from '../../utils/utils';
 import ThanksPopup from '../thanks-popup/thanks-popup';
 
 function Cart() {
@@ -19,9 +19,9 @@ function Cart() {
     const { currentCart, setCurrentCart } = useContext(CartContext);
     const { overlay, setOverlay } = useContext(OverlayContext);
     const total = calculateTotal(currentCart);
+    let code = '';
 
     useEffect(() => {
-        setPurchased(false);
         const cartData = JSON.parse(localStorage.getItem('cart'));
         if (cartData) {
             setCurrentCart(cartData);
@@ -37,6 +37,7 @@ function Cart() {
     }, [currentCart]);
 
     const toggleCheckoutForm = (e) => {
+        code = generateCode(6);
         e.preventDefault();
         if (localStorage.getItem('user')) {
             setOrderResume();
@@ -66,8 +67,15 @@ function Cart() {
                             ))}
                     </div>
                     <div className={classes.checkoutContainer}>
-                        <Button onClick={toggleCheckoutForm}>Checkout</Button>
-                        <p className={classes.cartTotal}>Total: {total}€</p>
+                        <div className={classes.buttons}>
+                            <Button onClick={toggleCheckoutForm}>
+                                Checkout
+                            </Button>
+                            <Button onClick={() => setCurrentCart([])}>
+                                Reset
+                            </Button>
+                        </div>
+                        <p>Total (excl. shipping): {total}€</p>
                     </div>
                 </div>
             )}
@@ -91,14 +99,14 @@ function Cart() {
                     setThanksPopUp={setThanksPopUp}
                     setCurrentCart={setCurrentCart}
                     setPurchased={setPurchased}
+                    code={code}
                 />
             )}
             {thanksPopUp && (
                 <ThanksPopup
                     setThanksPopUp={setThanksPopUp}
-                    setCurrentCart={setCurrentCart}
-                    setUser={setUser}
                     setOverlay={setOverlay}
+                    setPurchased={setPurchased}
                 />
             )}
         </div>

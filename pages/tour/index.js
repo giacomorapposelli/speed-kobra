@@ -1,44 +1,22 @@
 import classes from './tour.module.css';
+import { tourDates } from './data';
 
 function Tour() {
     return (
         <div className='section'>
             <h1>UPCOMING TOURDATES</h1>
             <div className={classes.showContainer}>
-                <p className={classes.columnTitle}>DATE</p>
-                <p className={classes.columnTitle}>LOCATION</p>
-                <p className={classes.columnTitle}>CITY</p>
+                <h3 className={classes.columnTitle}>DATE</h3>
+                <h3 className={classes.columnTitle}>LOCATION</h3>
+                <h3 className={classes.columnTitle}>CITY</h3>
             </div>
-            <div className={classes.showContainer}>
-                <p className={classes.column}>21.11.2020</p>
-                <p className={classes.column}>KULTURHAUS KILI</p>
-                <p className={classes.column}>BERLIN,DE</p>
-            </div>
-            <div className={classes.showContainer}>
-                <p className={classes.column}>16.11.2019</p>
-                <p className={classes.column}>LOBUSCH NO PASARAN</p>
-                <p className={classes.column}>HAMBURG,DE</p>
-            </div>
-            <div className={classes.showContainer}>
-                <p className={classes.column}>02.11.2019</p>
-                <p className={classes.column}>PALETTENFEST</p>
-                <p className={classes.column}>GÖTTINGEN,DE</p>
-            </div>
-            <div className={classes.showContainer}>
-                <p className={classes.column}>01.11.2019</p>
-                <p className={classes.column}>VRANKREICH</p>
-                <p className={classes.column}>AMSTERDAM,NL</p>
-            </div>
-            <div className={classes.showContainer}>
-                <p className={classes.column}>02.11.2019</p>
-                <p className={classes.column}>PALETTENFEST</p>
-                <p className={classes.column}>GÖTTINGEN,DE</p>
-            </div>
-            <div className={classes.showContainer}>
-                <p className={classes.column}>01.11.2019</p>
-                <p className={classes.column}>VRANKREICH</p>
-                <p className={classes.column}>AMSTERDAM,NL</p>
-            </div>
+            {tourDates.map((show, index) => (
+                <div className={classes.showContainer} key={index}>
+                    <p className={classes.column}>{show.date}</p>
+                    <p className={classes.column}>{show.location}</p>
+                    <p className={classes.column}>{show.city}</p>
+                </div>
+            ))}
         </div>
     );
 }

@@ -13,17 +13,20 @@
     align-items: center;
 }
 
-.iconsContainer {
-    margin-right: 20px;
-    margin-top: 2px;
+.footer p {
+    margin-left: 1rem;
+    font-size: 0.8rem;
 }
 
-.iconWrapper {
-    box-sizing: content-box;
+.iconsContainer {
+    margin-right: 0.5rem;
+    margin-top: 2px;
+    display: flex;
 }
 
 .icon {
     margin-right: 0.5rem;
+    width: 1.5rem;
     transition: filter 0.3s ease-in-out;
 }
 
@@ -32,13 +35,23 @@
     cursor: pointer;
 }
 
-.copyright {
-    font-size: 1.2rem;
-    margin-left: 20px;
+@media (max-width: 920px) {
+    .icon,
+    .iconsContainer {
+        margin-right: 0.25rem;
+    }
 }
 
-@media (max-width: 900px) {
-    .copyright {
-        font-size: 0.9rem;
+@media (max-width: 600px) {
+    .iconsContainer {
+        margin-right: 0;
+    }
+
+    .icon {
+        width: 1rem;
+    }
+
+    .footer p {
+        margin-left: 0.5rem;
     }
 }

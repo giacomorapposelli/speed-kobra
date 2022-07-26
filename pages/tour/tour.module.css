@@ -1,5 +1,4 @@
 .showContainer {
-    margin: 0 auto;
     height: 10%;
     width: 80%;
     border-bottom: 2px solid rgb(104, 104, 104);
@@ -9,21 +8,21 @@
     justify-content: space-between;
 }
 
-.columnTitle,
-.column {
+.showContainer h3,
+.showContainer p {
     width: 33%;
     color: grey;
     text-align: center;
 }
 
-.column {
+.showContainer p {
     color: rgb(235, 235, 235);
     text-decoration: none;
 }
 
-@media (max-width: 900px) {
-    .columnTitle,
-    .column {
-        font-size: 0.75rem;
+@media (max-width: 920px) {
+    .showContainer {
+        width: 90%;
+        height: 10%;
     }
 }

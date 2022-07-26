@@ -1,13 +1,13 @@
 import CartItem from '../cart/cart-item';
 import classes from './order-resume.module.css';
 import Button from '../ui/button';
-import { generateCode } from '../../utils/utils';
 import { useEffect } from 'react';
 import closeIcon from '../../public/icons/close-popup.png';
 import Image from 'next/image';
 
 function OrderResume({
     order,
+    code,
     total,
     user,
     setUser,
@@ -57,28 +57,32 @@ function OrderResume({
     };
 
     return (
-        <div className={classes.orderResume}>
+        <div className={`popUp ' ${classes.orderResume}`}>
             <div className='closeIcon'>
                 <Image src={closeIcon} alt='close' onClick={closeModal} />
             </div>
-            <h1>CONFIRM YOUR ORDER</h1>
-            <h3>
+            <h2>CONFIRM YOUR ORDER</h2>
+            <p className={classes.headline}>
                 Once your order is confirmed, you'll be soon contacted about
                 shipment and payment methods
-            </h3>
+            </p>
             <div className={classes.orderContainer}>
-                <h2>Order Code: {generateCode(6)}</h2>
+                <p>Order Code: {code}</p>
                 <div className={classes.itemsContainer}>
                     {order.map((item, index) => (
-                        <CartItem item={item} key={index} />
+                        <CartItem
+                            item={item}
+                            key={index}
+                            className={classes.cartItem}
+                        />
                     ))}
                 </div>
                 <div className={classes.checkoutContainer}>
                     <Button onClick={handleSubmit}>CONFIRM</Button>
-                    <p className={classes.cartTotal}>Total: {total}€</p>
+                    <p>Total (excl. shipping): {total}€</p>
                 </div>
                 <div className={classes.address}>
-                    <h2>SHIP TO:</h2>
+                    <p>SHIP TO:</p>
                     <p className='address'>
                         {user.firstname + ' ' + user.lastname}
                     </p>
@@ -87,9 +91,9 @@ function OrderResume({
                         {user.zip}, {user.city}
                     </p>
                     <p className='address'>{user.country}</p>
+                    <Button onClick={editAddress}>EDIT</Button>
                 </div>
             </div>
-            <Button onClick={editAddress}>EDIT</Button>
         </div>
     );
 }

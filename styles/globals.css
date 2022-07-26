@@ -56,6 +56,25 @@ p {
     background: rgba(90, 90, 90, 0.842);
 }
 
+.popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    background-image: url('../public/images/background.jpg');
+    background-size: cover;
+    border: 3px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 4px 5px 5px 0px rgba(0, 0, 0, 0.58);
+    z-index: 3;
+    margin: auto;
+    transform: translate(-50%, -50%);
+}
+
 .rightArrow,
 .leftArrow,
 .closeIcon {
@@ -74,7 +93,7 @@ p {
 
 .closeIcon {
     top: 2%;
-    width: 1.5rem;
+    width: 1rem;
 }
 
 .leftArrow:hover,
@@ -83,8 +102,43 @@ p {
     filter: brightness(0.4);
 }
 
-@media (max-width: 900px) {
+.loading {
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 5rem;
+}
+
+@media (max-width: 920px) {
     h1 {
-        font-size: 2.25rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .closeIcon {
+        top: 0.5%;
+        width: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    p {
+        font-size: 0.2rem;
     }
 }
