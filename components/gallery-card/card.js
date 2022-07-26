@@ -1,9 +1,9 @@
 import { useState, useContext } from 'react';
 import { OverlayContext } from '../../contexts/overlay-context';
-import ImageSlider from '../../components/slider/slider';
+import ImageSlider from '../slider/slider';
 import Image from 'next/image';
-import { galleryImages } from './data';
-import classes from './gallery.module.css';
+import { galleryImages } from '../../data/gallery-data';
+import classes from '../../pages/gallery/gallery.module.css';
 
 export default function Card({ card }) {
     const [popUp, setPopUp] = useState(false);

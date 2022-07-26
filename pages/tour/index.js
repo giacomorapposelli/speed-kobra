@@ -1,5 +1,5 @@
 import classes from './tour.module.css';
-import { tourDates } from './data';
+import { tourDates } from '../../data/tour-data';
 
 function Tour() {
     return (

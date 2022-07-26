@@ -1,6 +1,6 @@
 import classes from './gallery.module.css';
-import { galleryData } from './data';
-import Card from './card';
+import galleryData from '../../data/gallery-data';
+import Card from '../../components/gallery-card/card';
 
 export default function Gallery() {
     return (

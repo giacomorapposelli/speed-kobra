@@ -1,4 +1,4 @@
-import items from './data';
+import items from '../../data/store-data';
 import classes from './items.module.css';
 import Item from './item';
 

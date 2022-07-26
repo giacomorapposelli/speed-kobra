@@ -1,12 +1,12 @@
-import harvester from '../../public/images/harvester.jpg';
-import longsleeve from '../../public/images/longsleeve.jpg';
-import vinylRed from '../../public/images/vinyl-red.jpg';
-import vinylBlue from '../../public/images/vinyl-blue.jpg';
-import vinylGreen from '../../public/images/vinyl-green.jpg';
-import tape1 from '../../public/images/tape1.jpg';
-import tape2 from '../../public/images/tape2.jpg';
-import tape3 from '../../public/images/tape3.jpg';
-import tape4 from '../../public/images/tape4.jpg';
+import harvester from '../public/images/harvester.jpg';
+import longsleeve from '../public/images/longsleeve.jpg';
+import vinylRed from '../public/images/vinyl-red.jpg';
+import vinylBlue from '../public/images/vinyl-blue.jpg';
+import vinylGreen from '../public/images/vinyl-green.jpg';
+import tape1 from '../public/images/tape1.jpg';
+import tape2 from '../public/images/tape2.jpg';
+import tape3 from '../public/images/tape3.jpg';
+import tape4 from '../public/images/tape4.jpg';
 
 const items = [
     {
