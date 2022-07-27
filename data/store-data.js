@@ -12,7 +12,7 @@ const items = [
     {
         id: 1,
         name: 'Harvester Of Hate',
-        type: 'Tshirt',
+        type: 'T-Shirt',
         price: 10,
         preview: harvester,
         sizes: ['S', 'M', 'L'],

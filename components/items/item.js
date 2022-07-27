@@ -54,8 +54,8 @@ export default function Item({ item }) {
                         onChange={(event) => setSize(event.target.value)}
                     >
                         <option value=''>
-                            Choose a {item.type === 'Tshirt' ? 'size' : 'color'}
-                            :
+                            Choose a{' '}
+                            {item.type === 'T-Shirt' ? 'size' : 'color'}:
                         </option>
                         {item.sizes &&
                             item.sizes.map((size, index) => (
