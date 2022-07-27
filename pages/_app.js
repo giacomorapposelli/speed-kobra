@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
             <Head>
                 <title>Speedkobra official website</title>
                 <link rel='shortcut icon' href='/favicon/favicon.ico' />
+                <link rel='stylesheet' href='/' />
             </Head>
             <Overlay>
                 <Component {...pageProps} />
