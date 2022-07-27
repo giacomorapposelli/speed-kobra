@@ -4,7 +4,6 @@ import ImageSlider from '../slider/slider'
 import Image from 'next/image'
 import { galleryImages } from '../../data/gallery-data'
 import classes from '../../pages/gallery/gallery.module.css'
-import spinner from '../../public/icons/spinner.svg'
 
 export default function Card({ card }) {
   const [popUp, setPopUp] = useState(false)
@@ -17,9 +16,6 @@ export default function Card({ card }) {
 
   return (
     <div className={classes.card}>
-      <div className="loading">
-        <Image src={spinner} alt="loading" />
-      </div>
       <div className={classes.previewImg} onClick={togglePopUp}>
         <Image src={card.src} alt="live" />
       </div>
