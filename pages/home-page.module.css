@@ -80,7 +80,7 @@
     }
 
     .albumImg {
-        width: 14rem;
+        width: 17.5rem;
         margin-top: 2rem;
     }
 
@@ -106,5 +106,6 @@
 
 @media (max-width: 600px) {
     .albumImg {
+        width: 12.5rem;
     }
 }

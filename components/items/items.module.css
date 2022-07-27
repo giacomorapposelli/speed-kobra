@@ -111,3 +111,10 @@
         font-size: 0.75rem;
     }
 }
+
+@media (max-width: 600px) {
+    .itemCard button,
+    .itemCard select {
+        font-size: 0.5rem;
+    }
+}
