@@ -38,8 +38,7 @@ function CheckoutForm({ toggleCheckoutForm, setOrderResume, user, setUser }) {
             value={user[input.split(' ').join('').toLowerCase()] || ''}
             placeholder={input}
             onChange={handleChange}
-            required
-          ></input>
+            required></input>
         ))}
         <div className={classes.buttonsContainer}>
           <Button>Confirm</Button>

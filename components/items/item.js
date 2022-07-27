@@ -64,8 +64,7 @@ export default function Item({ item }) {
             onClick={(e) => {
               e.preventDefault()
               handleAddToCart(item, size)
-            }}
-          >
+            }}>
             Add to cart
           </Button>
         </form>

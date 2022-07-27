@@ -46,8 +46,7 @@ const ImageSlider = ({ slides, togglePopUp }) => {
               ? `${classes.image} ${classes.slide} ${classes.active}`
               : classes.slide
           }
-          key={index}
-        >
+          key={index}>
           {index === current && (
             <Image
               src={slide}

@@ -28,8 +28,7 @@ export default function CartProvider({ children }) {
         addToCart,
         setCurrentCart,
         removeItem,
-      }}
-    >
+      }}>
       {children}
     </CartContext.Provider>
   )

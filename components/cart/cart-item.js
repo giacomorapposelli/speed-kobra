@@ -11,8 +11,7 @@ function CartItem({ item, className }) {
     <div
       key={item.id}
       className={`${classes.cartItem} ${className || ''}`}
-      id={item.id}
-    >
+      id={item.id}>
       <div className={classes.smallImg}>
         <Image src={item.preview} objectFit="cover" layout="fill" />
       </div>
@@ -27,8 +26,7 @@ function CartItem({ item, className }) {
       <div
         className={classes.deleteIcon}
         id={item.id}
-        onClick={() => removeItem(item.id)}
-      >
+        onClick={() => removeItem(item.id)}>
         <Image src={deleteIcon} alt="delete" height={30} width={30} />
       </div>
     </div>

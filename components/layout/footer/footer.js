@@ -12,8 +12,7 @@ function Footer() {
             key={index}
             target="_blank"
             href={link.link}
-            className={classes.icon}
-          >
+            className={classes.icon}>
             <div className={classes.icon}>
               <Image src={link.src} alt={link.alt} />
             </div>
