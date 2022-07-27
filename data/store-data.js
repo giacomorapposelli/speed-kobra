@@ -1,5 +1,5 @@
 import harvester from '../public/images/harvester.jpg';
-import longsleeve from '../public/images/longsleeve.jpg';
+import excoriated from '../public/images/excoriated.jpg';
 import vinylRed from '../public/images/vinyl-red.jpg';
 import vinylBlue from '../public/images/vinyl-blue.jpg';
 import vinylGreen from '../public/images/vinyl-green.jpg';
@@ -22,14 +22,14 @@ const items = [
     },
     {
         id: 2,
-        name: 'Dehumanized',
-        type: 'Longsleeve',
+        name: 'Excoriated',
+        type: 'T-Shirt',
         price: 15,
-        preview: longsleeve,
+        preview: excoriated,
         sizes: ['M', 'L'],
         quantity: 1,
         inStock: true,
-        images: [longsleeve]
+        images: [excoriated]
     },
     {
         id: 3,
