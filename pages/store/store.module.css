@@ -1,13 +1,13 @@
 .storeContainer {
-    display: flex;
-    width: 100%;
-    height: 70%;
+  display: flex;
+  width: 100%;
+  height: 70%;
 }
 
 @media (max-width: 920px) {
-    .storeContainer {
-        flex-direction: column;
-        overflow-y: scroll;
-        height: 76%;
-    }
+  .storeContainer {
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 76%;
+  }
 }

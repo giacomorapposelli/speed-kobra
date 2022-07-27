@@ -1,64 +1,64 @@
 .previewImg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgb(65, 65, 65);
-    cursor: pointer;
-    box-shadow: 5px 5px 15px 0px rgb(31, 31, 31);
-    transition: filter 0.3s ease-in-out;
-    filter: grayscale();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(65, 65, 65);
+  cursor: pointer;
+  box-shadow: 5px 5px 15px 0px rgb(31, 31, 31);
+  transition: filter 0.3s ease-in-out;
+  filter: grayscale();
 }
 
 .previewImg:hover {
-    filter: brightness();
+  filter: brightness();
 }
 
 .gallery {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    width: 20rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5rem;
+  width: 20rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 
 .cardsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 70%;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70%;
+  width: 100%;
 }
 
 .card h3:hover {
-    color: gray;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
+  color: gray;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 @media (max-width: 920px) {
-    .cardsContainer {
-        flex-direction: column;
-    }
+  .cardsContainer {
+    flex-direction: column;
+  }
 
-    .card {
-        width: 15rem;
-        margin-bottom: 0;
-    }
+  .card {
+    width: 15rem;
+    margin-bottom: 0;
+  }
 
-    .card h3 {
-        font-size: 1rem;
-    }
+  .card h3 {
+    font-size: 1rem;
+  }
 }

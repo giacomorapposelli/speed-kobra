@@ -1,63 +1,63 @@
 .checkOutFormContainer {
-    justify-content: space-evenly;
-    height: 39rem;
-    width: 30rem;
+  justify-content: space-evenly;
+  height: 39rem;
+  width: 30rem;
 }
 
 .checkOutFormContainer form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
 }
 
 .checkOutFormContainer input {
-    border: none;
-    border-bottom: 2px solid rgb(82, 82, 82);
-    background-color: transparent;
-    width: 90%;
-    height: 30px;
-    font-size: 20px;
-    outline: none;
-    display: block;
-    font-family: AA_typewriter;
-    color: rgb(235, 235, 235);
-    margin-bottom: 1.5rem;
+  border: none;
+  border-bottom: 2px solid rgb(82, 82, 82);
+  background-color: transparent;
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+  outline: none;
+  display: block;
+  font-family: AA_typewriter;
+  color: rgb(235, 235, 235);
+  margin-bottom: 1.5rem;
 }
 
 .checkOutFormContainer input:-webkit-autofill,
 .checkOutFormContainer input:-webkit-autofill:hover,
 .checkOutFormContainer input:-webkit-autofill:focus {
-    -webkit-text-fill-color: rgb(235, 235, 235);
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-    transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: rgb(235, 235, 235);
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .checkOutFormContainer input:focus {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .buttonsContainer {
-    width: 18rem;
-    height: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
+  width: 18rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 @media (max-width: 600px) {
-    .checkOutFormContainer {
-        width: 20rem;
-        height: 35rem;
-    }
-    .checkOutFormContainer input {
-        width: 100%;
-    }
+  .checkOutFormContainer {
+    width: 20rem;
+    height: 35rem;
+  }
+  .checkOutFormContainer input {
+    width: 100%;
+  }
 
-    .buttonsContainer {
-        width: 15rem;
-        margin: 0;
-    }
+  .buttonsContainer {
+    width: 15rem;
+    margin: 0;
+  }
 }

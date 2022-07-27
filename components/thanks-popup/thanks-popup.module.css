@@ -1,17 +1,17 @@
 .thanksPopUp {
-    width: 65%;
-    height: 30%;
-    justify-content: space-evenly;
+  width: 65%;
+  height: 30%;
+  justify-content: space-evenly;
 }
 
 .thanksPopUp h1,
 .thanksPopUp h2 {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 @media (max-width: 920px) {
-    .thanksPopUp {
-        width: 80%;
-        height: 25%;
-    }
+  .thanksPopUp {
+    width: 80%;
+    height: 25%;
+  }
 }

@@ -1,120 +1,120 @@
 .items {
-    width: 50%;
-    height: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .itemContainer {
-    width: 45%;
-    height: 45%;
-    display: flex;
+  width: 45%;
+  height: 45%;
+  display: flex;
 }
 
 .itemContainer form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .itemContainer button {
-    margin-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .description {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    margin-left: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin-left: 1rem;
 }
 
 .description p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .itemCard {
-    width: 45%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .itemContainer select {
-    height: 1.5rem;
-    width: 7rem;
-    background-color: transparent;
-    font-family: AA_typewriter;
-    border: 1px solid rgb(235, 235, 235);
-    color: rgb(235, 235, 235);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    box-shadow: 1px 1px 1px 0px rgba(231, 231, 231, 0.58);
-    transition: all 0.3s ease-in-out;
+  height: 1.5rem;
+  width: 7rem;
+  background-color: transparent;
+  font-family: AA_typewriter;
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(235, 235, 235);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 1px 1px 1px 0px rgba(231, 231, 231, 0.58);
+  transition: all 0.3s ease-in-out;
 }
 
 .itemContainer option {
-    background-color: black;
+  background-color: black;
 }
 
 .itemImg {
-    border: 1px solid grey;
-    border-radius: 3px;
-    box-shadow: 2px 2px 2px 0px grey;
-    transition: filter 0.3s ease-in-out;
-    position: relative;
-    width: 7rem;
-    height: 9rem;
-    cursor: pointer;
+  border: 1px solid grey;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 0px grey;
+  transition: filter 0.3s ease-in-out;
+  position: relative;
+  width: 7rem;
+  height: 9rem;
+  cursor: pointer;
 }
 
 .itemImg:hover {
-    filter: brightness(0.4);
-    box-shadow: 1px 1px 1px 0px grey;
-    top: 1px;
+  filter: brightness(0.4);
+  box-shadow: 1px 1px 1px 0px grey;
+  top: 1px;
 }
 
 .itemImg:active {
-    box-shadow: 0 0 rgba(236, 236, 236, 0.58);
-    top: 2px;
+  box-shadow: 0 0 rgba(236, 236, 236, 0.58);
+  top: 2px;
 }
 
 @media (max-width: 920px) {
-    .items {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-    .description {
-        margin-left: 0.5rem;
-    }
+  .items {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .description {
+    margin-left: 0.5rem;
+  }
 }
 
 @media (max-width: 600px) {
-    .itemImg {
-        width: 5rem;
-        height: 7rem;
-    }
-    .itemContainer select,
-    .itemContainer button {
-        font-size: 0.75rem;
-        width: 5rem;
-        height: 1.25rem;
-    }
+  .itemImg {
+    width: 5rem;
+    height: 7rem;
+  }
+  .itemContainer select,
+  .itemContainer button {
+    font-size: 0.75rem;
+    width: 5rem;
+    height: 1.25rem;
+  }
 
-    .description p {
-        font-size: 0.75rem;
-    }
+  .description p {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 600px) {
-    .itemCard button,
-    .itemCard select {
-        font-size: 0.5rem;
-    }
+  .itemCard button,
+  .itemCard select {
+    font-size: 0.5rem;
+  }
 }

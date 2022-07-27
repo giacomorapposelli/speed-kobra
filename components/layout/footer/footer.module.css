@@ -1,57 +1,57 @@
 .footer {
-    height: 6%;
-    width: 100%;
-    color: rgb(235, 235, 235);
-    background-color: rgba(0, 0, 0, 0.85);
-    position: fixed;
-    overflow: hidden;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  height: 6%;
+  width: 100%;
+  color: rgb(235, 235, 235);
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer p {
-    margin-left: 1rem;
-    font-size: 0.8rem;
+  margin-left: 1rem;
+  font-size: 0.8rem;
 }
 
 .iconsContainer {
-    margin-right: 0.5rem;
-    margin-top: 2px;
-    display: flex;
+  margin-right: 0.5rem;
+  margin-top: 2px;
+  display: flex;
 }
 
 .icon {
-    margin-right: 0.5rem;
-    width: 1.5rem;
-    transition: filter 0.3s ease-in-out;
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  transition: filter 0.3s ease-in-out;
 }
 
 .icon:hover {
-    filter: brightness(0.4);
-    cursor: pointer;
+  filter: brightness(0.4);
+  cursor: pointer;
 }
 
 @media (max-width: 920px) {
-    .icon,
-    .iconsContainer {
-        margin-right: 0.25rem;
-    }
+  .icon,
+  .iconsContainer {
+    margin-right: 0.25rem;
+  }
 }
 
 @media (max-width: 600px) {
-    .iconsContainer {
-        margin-right: 0;
-    }
+  .iconsContainer {
+    margin-right: 0;
+  }
 
-    .icon {
-        width: 1rem;
-    }
+  .icon {
+    width: 1rem;
+  }
 
-    .footer p {
-        margin-left: 0.5rem;
-    }
+  .footer p {
+    margin-left: 0.5rem;
+  }
 }

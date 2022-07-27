@@ -1,7 +1,7 @@
-import classes from './error-alert.module.css';
+import classes from './error-alert.module.css'
 
 function ErrorAlert({ children }) {
-    return <div className={classes.alert}>{children}</div>;
+  return <div className={classes.alert}>{children}</div>
 }
 
-export default ErrorAlert;
+export default ErrorAlert
