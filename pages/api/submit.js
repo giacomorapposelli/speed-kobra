@@ -26,7 +26,7 @@ export default function handler(req, res) {
                 Size: ${item.size}\r\n\
                 Price: ${item.price}€\r\n\
             `
-            )}\r\n\
+            )}
             |-------------------------------------------------------------------------------|\r\n\
             Total: ${calculateTotal(order)}€\r\n\r\n\
             Ship To:\r\n
@@ -46,10 +46,10 @@ export default function handler(req, res) {
             )
         };
         const msgDataLocal = {
-            to: 'giacomo@rapposelli.org',
+            to: 'speedkobra666@gmail.com',
             from: 'orders@speed-kobra.com',
             subject: 'We have a new Order',
-            text: message,
+            text: message.split(',').join(''),
             html: message.replace(/\r\n/g, '<br>')
         };
         mail.send(msgDataLocal);
