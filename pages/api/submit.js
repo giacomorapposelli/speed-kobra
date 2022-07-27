@@ -29,6 +29,7 @@ export default function handler(req, res) {
             )}
             |-------------------------------------------------------------------------------|\r\n\
             Total: ${calculateTotal(order)}€\r\n\r\n\
+            Email: ${user.email}\r\n\r\n\
             Ship To:\r\n
             ${user.firstname} ${user.lastname}\r\n
             ${user.address}\r\n
