@@ -62,3 +62,10 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 600px) {
+  .card {
+    width: 12rem;
+    height: 70%;
+  }
+}

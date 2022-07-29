@@ -38,7 +38,7 @@
   color: gray;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 920px) {
   .link a {
     font-size: 1rem;
   }

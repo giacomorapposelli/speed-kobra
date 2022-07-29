@@ -1,5 +1,13 @@
+.tourContainer {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .showContainer {
-  height: 10%;
+  height: 12%;
   width: 80%;
   border-bottom: 2px solid rgb(104, 104, 104);
   display: flex;
