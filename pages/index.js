@@ -12,13 +12,14 @@ function HomePage() {
         <a
           href="https://speedkobra666.bandcamp.com/album/nightrider"
           className={classes.listen}
-          target="_blank">
+          target="_blank"
+        >
           Listen Here
         </a>
       </div>
       <div className={classes.albumContainer}>
         <div className={classes.albumImg}>
-          <Image src={album} alt="album" />
+          <Image src={album} alt="album" priority />
         </div>
       </div>
     </div>
