@@ -7,8 +7,9 @@ import EmptyCart from './empty-cart'
 import Button from '../ui/button'
 import CheckoutForm from '../checkout-form/checkout-form'
 import OrderResume from '../order-resume/order-resume'
-import { calculateTotal, generateCode } from '../../utils/utils'
 import ThanksPopup from '../thanks-popup/thanks-popup'
+import CartHeader from './cart-header'
+import { calculateTotal } from '../../utils/utils'
 
 function Cart() {
   const [checkoutForm, setCheckoutForm] = useState(false)
@@ -18,8 +19,7 @@ function Cart() {
   const [user, setUser] = useState({})
   const { currentCart, setCurrentCart } = useContext(CartContext)
   const { overlay, setOverlay } = useContext(OverlayContext)
-  const total = calculateTotal(currentCart)
-  let code = ''
+  const total = currentCart.reduce((acc, cur) => acc + cur.price * cur.qty, 0)
 
   useEffect(() => {
     const cartData = JSON.parse(localStorage.getItem('cart'))
@@ -36,8 +36,7 @@ function Cart() {
     localStorage.setItem('cart', JSON.stringify(currentCart))
   }, [currentCart])
 
-  const toggleCheckoutForm = (e) => {
-    code = generateCode(6)
+  const toggleCheckoutForm = e => {
     e.preventDefault()
     if (localStorage.getItem('user')) {
       setOrderResume()
@@ -55,10 +54,11 @@ function Cart() {
 
   return (
     <div className={classes.cart}>
-      <h2>YOUR CART:</h2>
+      <h2 className={classes.cartTitle}>YOUR CART:</h2>
       {currentCart.length === 0 && <EmptyCart />}
       {currentCart.length > 0 && (
         <div className={classes.cartContainer}>
+          <CartHeader />
           <div className={classes.cartItemsContainer}>
             {currentCart &&
               currentCart.length > 0 &&
@@ -95,7 +95,6 @@ function Cart() {
           setThanksPopUp={setThanksPopUp}
           setCurrentCart={setCurrentCart}
           setPurchased={setPurchased}
-          code={code}
         />
       )}
       {thanksPopUp && (

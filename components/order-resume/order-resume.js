@@ -4,10 +4,10 @@ import Button from '../ui/button'
 import { useEffect } from 'react'
 import closeIcon from '../../public/icons/close-popup.png'
 import Image from 'next/image'
+import CartHeader from '../cart/cart-header'
 
 function OrderResume({
   order,
-  code,
   total,
   user,
   setUser,
@@ -67,7 +67,7 @@ function OrderResume({
         and payment methods
       </p>
       <div className={classes.orderContainer}>
-        <p>Order Code: {code}</p>
+        <CartHeader className={classes.cardHeader} />
         <div className={classes.itemsContainer}>
           {order.map((item, index) => (
             <CartItem item={item} key={index} className={classes.cartItem} />

@@ -51,8 +51,6 @@ p {
   bottom: 0;
   right: 0;
   z-index: 2;
-  transition-property: background;
-  transition: 0.3s ease-in-out;
   background: rgba(90, 90, 90, 0.842);
 }
 
@@ -84,7 +82,7 @@ p {
   width: 2rem;
   z-index: 10;
   cursor: pointer;
-  transition: filter 0.3s ease-in-out;
+  transition: filter 0.2s ease-in-out;
 }
 
 .leftArrow {

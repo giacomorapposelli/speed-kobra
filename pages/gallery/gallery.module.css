@@ -6,7 +6,7 @@
   border: 2px solid rgb(65, 65, 65);
   cursor: pointer;
   box-shadow: 5px 5px 15px 0px rgb(31, 31, 31);
-  transition: filter 0.3s ease-in-out;
+  transition: filter 0.2s ease-in-out;
   filter: grayscale();
 }
 
@@ -45,7 +45,7 @@
 .card h3:hover {
   color: gray;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 @media (max-width: 920px) {

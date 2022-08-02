@@ -4,12 +4,25 @@
 }
 
 .cartContainer {
-  height: 22.5rem;
+  height: 25rem;
 }
 
 .emptyCart h2 {
   margin: 0 auto;
   color: gray;
+}
+
+.cartHeader div:first-of-type {
+  width: 3rem;
+}
+
+.cartHeader div:last-of-type {
+  width: 2rem;
+}
+
+.cartHeader p {
+  color: grey;
+  text-align: center;
 }
 
 .emptyCart {
@@ -24,12 +37,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-height: 22.5rem;
+  max-height: 18rem;
   overflow-y: scroll;
 }
 
-.cartItem {
-  border-bottom: 2px solid #808080;
+.cartItem,
+.cartHeader {
+  border-bottom: 2px solid #80808055;
   width: 90%;
   height: 4.5rem;
   display: flex;
@@ -37,6 +51,11 @@
   justify-content: space-between;
   padding-bottom: 1%;
   padding-top: 1%;
+}
+
+.cartHeader {
+  height: 2.5rem;
+  margin-left: 5%;
 }
 
 .smallImg {
@@ -48,12 +67,21 @@
   object-fit: cover;
 }
 
-.itemName {
-  width: 40%;
+.itemName,
+.itemDesc {
+  width: 42%;
+  text-align: center;
 }
 
 .itemDesc {
-  width: 20%;
+  width: 21%;
+}
+
+.quantityBox {
+  width: 21%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .checkoutContainer {
@@ -65,14 +93,15 @@
 }
 
 .buttons {
-  width: 13rem;
+  width: 12.5rem;
   display: flex;
   justify-content: space-between;
 }
 
 .deleteIcon {
   cursor: pointer;
-  transition: filter 0.3s ease-in-out;
+  transition: filter 0.2s ease-in-out;
+  width: 2rem;
 }
 
 .deleteIcon:hover {
@@ -83,13 +112,18 @@
   font-size: 1rem;
 }
 
+.plusMinus {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.plusMinus:hover {
+  color: grey;
+}
+
 @media (max-width: 920px) {
   .cart {
     width: 100%;
-  }
-
-  .cartItemsContainer {
-    height: 23rem;
   }
 
   .emptyCart {
@@ -131,8 +165,11 @@
   .cartItem {
     height: 4rem;
   }
+  .cartHeader div:first-of-type {
+    width: 2.5rem;
+  }
 
-  .itemName {
-    width: 35%;
+  .cartHeader div:last-of-type {
+    width: 1rem;
   }
 }

@@ -56,7 +56,7 @@
   cursor: pointer;
   margin-top: 0.5rem;
   box-shadow: 1px 1px 1px 0px rgba(231, 231, 231, 0.58);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .itemContainer option {
@@ -67,7 +67,7 @@
   border: 1px solid grey;
   border-radius: 3px;
   box-shadow: 2px 2px 2px 0px grey;
-  transition: filter 0.3s ease-in-out;
+  transition: filter 0.2s ease-in-out;
   position: relative;
   width: 7rem;
   height: 9rem;
@@ -88,7 +88,7 @@
 @media (max-width: 920px) {
   .items {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .description {
     margin-left: 0.5rem;
