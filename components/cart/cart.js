@@ -9,7 +9,6 @@ import CheckoutForm from '../checkout-form/checkout-form'
 import OrderResume from '../order-resume/order-resume'
 import ThanksPopup from '../thanks-popup/thanks-popup'
 import CartHeader from './cart-header'
-import { calculateTotal } from '../../utils/utils'
 
 function Cart() {
   const [checkoutForm, setCheckoutForm] = useState(false)
@@ -19,7 +18,7 @@ function Cart() {
   const [user, setUser] = useState({})
   const { currentCart, setCurrentCart } = useContext(CartContext)
   const { overlay, setOverlay } = useContext(OverlayContext)
-  const total = calculateTotal(currentCart)
+  const total = currentCart.reduce((acc, cur) => acc + cur.price * cur.qty, 0)
 
   useEffect(() => {
     const cartData = JSON.parse(localStorage.getItem('cart'))
