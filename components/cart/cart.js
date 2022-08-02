@@ -19,7 +19,7 @@ function Cart() {
   const [user, setUser] = useState({})
   const { currentCart, setCurrentCart } = useContext(CartContext)
   const { overlay, setOverlay } = useContext(OverlayContext)
-  const total = currentCart.reduce((acc, cur) => acc + cur.price * cur.qty, 0)
+  const total = calculateTotal(currentCart)
 
   useEffect(() => {
     const cartData = JSON.parse(localStorage.getItem('cart'))

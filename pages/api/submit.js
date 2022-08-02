@@ -20,11 +20,12 @@ export default function handler(req, res) {
         `
     const message = `
             ${order.map(
-              (item) => `
+              item => `
                 |------------------------------------------------------------------------------|\r\n\
                 ${item.name} - ${item.type}\r\n\
                 Size: ${item.size}\r\n\
-                Price: ${item.price}€\r\n\
+                Qty: ${item.qty}\r\n\
+                Price: ${item.price * item.qty}€\r\n\
             `
             )}
             |-------------------------------------------------------------------------------|\r\n\

@@ -7,3 +7,6 @@ export const generateCode = count => {
   }
   return result
 }
+
+export const calculateTotal = items =>
+  items.reduce((acc, cur) => acc + cur.price * cur.qty)
