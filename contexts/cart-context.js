@@ -7,7 +7,7 @@ export default function CartProvider({ children }) {
 
   const addToCart = (product, size) => {
     const itemExists = currentCart.find(
-      item => item.id === product.id && item.size === size
+      (item) => item.id === product.id && item.size === size
     )
     if (itemExists) {
       setCurrentCart(
@@ -24,9 +24,9 @@ export default function CartProvider({ children }) {
     localStorage.setItem('cart', JSON.stringify(currentCart))
   }
 
-  const decreaseQuantity = product => {
+  const decreaseQuantity = (product) => {
     const existingItem = currentCart.find(
-      item => item.id === product.id && item.size === product.size
+      (item) => item.id === product.id && item.size === product.size
     )
     if (existingItem && existingItem.qty > 1) {
       setCurrentCart(
@@ -41,8 +41,10 @@ export default function CartProvider({ children }) {
     }
   }
 
-  const removeItem = itemIndex => {
-    const newCart = currentCart.filter(item => item.index !== itemIndex)
+  const removeItem = (itemIndex) => {
+    const newCart = currentCart.filter((item) =>
+      item.index ? item.index !== itemIndex : item.id !== itemIndex
+    )
     setCurrentCart(newCart)
   }
 
@@ -54,8 +56,7 @@ export default function CartProvider({ children }) {
         setCurrentCart,
         removeItem,
         decreaseQuantity,
-      }}
-    >
+      }}>
       {children}
     </CartContext.Provider>
   )

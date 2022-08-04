@@ -13,8 +13,7 @@ export default function Quantityelect({ item }) {
       <p>{item.qty}</p>
       <p
         onClick={() => addToCart(item, item.size)}
-        className={classes.plusMinus}
-      >
+        className={classes.plusMinus}>
         +
       </p>
     </div>

@@ -49,7 +49,7 @@ export default function Item({ item }) {
           />
         </div>
         <form>
-          <select name="size" onChange={event => setSize(event.target.value)}>
+          <select name="size" onChange={(event) => setSize(event.target.value)}>
             <option value="">
               Choose a {item.type === 'T-Shirt' ? 'size' : 'color'}:
             </option>
@@ -61,11 +61,10 @@ export default function Item({ item }) {
               ))}
           </select>
           <Button
-            onClick={e => {
+            onClick={(e) => {
               e.preventDefault()
               handleAddToCart(item, size)
-            }}
-          >
+            }}>
             Add to cart
           </Button>
         </form>

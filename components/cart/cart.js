@@ -35,7 +35,7 @@ function Cart() {
     localStorage.setItem('cart', JSON.stringify(currentCart))
   }, [currentCart])
 
-  const toggleCheckoutForm = e => {
+  const toggleCheckoutForm = (e) => {
     e.preventDefault()
     if (localStorage.getItem('user')) {
       setOrderResume()

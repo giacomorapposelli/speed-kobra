@@ -20,7 +20,7 @@ export default function handler(req, res) {
         `
     const message = `
             ${order.map(
-              item => `
+              (item) => `
                 |------------------------------------------------------------------------------|\r\n\
                 ${item.name} - ${item.type}\r\n\
                 Size: ${item.size}\r\n\
