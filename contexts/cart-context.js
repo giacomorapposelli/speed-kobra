@@ -48,13 +48,8 @@ export default function CartProvider({ children }) {
   }
 
   const removeItem = itemIndex => {
-    const newCart = currentCart.filter(item =>
-      item.index !== undefined
-        ? item.index !== itemIndex
-        : item.id !== itemIndex
-    )
+    const newCart = currentCart.filter(item => item.index !== itemIndex)
     setCurrentCart(newCart)
-    console.log(currentCart)
   }
 
   return (
