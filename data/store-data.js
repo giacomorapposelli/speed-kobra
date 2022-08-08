@@ -18,6 +18,7 @@ const items = [
     sizes: ['S', 'M', 'L'],
     inStock: true,
     images: [harvester],
+    qty: 1,
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const items = [
     sizes: ['M', 'L'],
     inStock: true,
     images: [excoriated],
+    qty: 1,
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const items = [
     sizes: ['Red', 'Blue', 'Green'],
     inStock: true,
     images: [vinylRed, vinylBlue, vinylGreen],
+    qty: 1,
   },
   {
     id: 4,
@@ -48,6 +51,7 @@ const items = [
     preview: tape1,
     inStock: true,
     images: [tape1, tape2, tape3, tape4],
+    qty: 1,
   },
 ]
 

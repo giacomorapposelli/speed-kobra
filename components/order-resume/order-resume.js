@@ -67,7 +67,7 @@ function OrderResume({
         and payment methods
       </p>
       <div className={classes.orderContainer}>
-        <CartHeader className={classes.cardHeader} />
+        <CartHeader />
         <div className={classes.itemsContainer}>
           {order.map((item, index) => (
             <CartItem item={item} key={index} className={classes.cartItem} />

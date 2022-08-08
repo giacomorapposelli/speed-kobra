@@ -173,4 +173,8 @@
   .cartHeader div:last-of-type {
     width: 1rem;
   }
+
+  .cartHeader {
+    height: 2rem;
+  }
 }

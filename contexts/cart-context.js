@@ -6,8 +6,9 @@ export default function CartProvider({ children }) {
   const [currentCart, setCurrentCart] = useState([])
 
   const addToCart = (product, size) => {
+    const newCart = []
     const itemExists = currentCart.find(
-      (item) => item.id === product.id && item.size === size
+      item => item.id === product.id && item.size === size
     )
     if (itemExists) {
       setCurrentCart(
@@ -18,15 +19,21 @@ export default function CartProvider({ children }) {
         )
       )
     } else {
-      setCurrentCart([...currentCart, { ...product, size, qty: 1 }])
+      product.size = size
+      currentCart.push(product)
+      setCurrentCart(
+        currentCart.map((item, index) => {
+          return { ...item, index }
+        })
+      )
     }
     console.log(currentCart)
     localStorage.setItem('cart', JSON.stringify(currentCart))
   }
 
-  const decreaseQuantity = (product) => {
+  const decreaseQuantity = product => {
     const existingItem = currentCart.find(
-      (item) => item.id === product.id && item.size === product.size
+      item => item.id === product.id && item.size === product.size
     )
     if (existingItem && existingItem.qty > 1) {
       setCurrentCart(
@@ -41,11 +48,14 @@ export default function CartProvider({ children }) {
     }
   }
 
-  const removeItem = (itemIndex) => {
-    const newCart = currentCart.filter((item) =>
-      item.index ? item.index !== itemIndex : item.id !== itemIndex
+  const removeItem = itemIndex => {
+    const newCart = currentCart.filter(item =>
+      item.index !== undefined
+        ? item.index !== itemIndex
+        : item.id !== itemIndex
     )
     setCurrentCart(newCart)
+    console.log(currentCart)
   }
 
   return (
@@ -56,7 +66,8 @@ export default function CartProvider({ children }) {
         setCurrentCart,
         removeItem,
         decreaseQuantity,
-      }}>
+      }}
+    >
       {children}
     </CartContext.Provider>
   )
