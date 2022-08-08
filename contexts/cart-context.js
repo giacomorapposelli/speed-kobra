@@ -27,7 +27,6 @@ export default function CartProvider({ children }) {
         })
       )
     }
-    console.log(currentCart)
     localStorage.setItem('cart', JSON.stringify(currentCart))
   }
 
