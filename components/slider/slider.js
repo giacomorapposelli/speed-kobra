@@ -49,6 +49,7 @@ const ImageSlider = ({ slides, togglePopUp }) => {
           key={index}>
           {index === current && (
             <Image
+              priority
               src={slide}
               alt="gallery pic"
               objectFit="contain"

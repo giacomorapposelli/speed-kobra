@@ -17,7 +17,7 @@ export default function Card({ card }) {
   return (
     <div className={classes.card}>
       <div className={classes.previewImg} onClick={togglePopUp}>
-        <Image src={card.src} alt="live" />
+        <Image src={card.src} alt="live" priority />
       </div>
       <h3 onClick={togglePopUp}>{card.name}</h3>
       {popUp && (

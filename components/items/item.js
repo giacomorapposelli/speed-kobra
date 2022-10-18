@@ -41,6 +41,7 @@ export default function Item({ item }) {
       <div className={classes.itemCard}>
         <div className={classes.itemImg}>
           <Image
+            priority
             src={item.preview}
             alt={item.name}
             layout="fill"
