@@ -4,7 +4,7 @@ const mail = require('@sendgrid/mail')
 
 mail.setApiKey(process.env.SENDGRID_API_KEY)
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method === 'POST') {
     const user = req.body[req.body.length - 1]
     const order = req.body.slice(0, req.body.length - 1)
@@ -51,8 +51,8 @@ export default function handler(req, res) {
       text: message.split(',').join(''),
       html: message.replace(/\r\n/g, '<br>'),
     }
-    mail.send(msgDataLocal)
-    mail.send(msgDataUser)
+    await mail.send(msgDataLocal)
+    await mail.send(msgDataUser)
   } else {
     res.status(200).json({ status: 'Ok' })
   }
